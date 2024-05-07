@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Order</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+</head>
+<body>
+  
+    <h1>Ice Cream Order Form</h1>
+    <label>
+      Number of scoops:
+      <input type="number" id="numScoops" min="1" value="1" />
+    </label>
+
+    <label>
+      <input type="radio" name="container" value="cone"
+      onclick="document.getElementById('toppings').style.display = 'none';"> Cone
+    </label>
+    <label>
+        <input type="radio" name="container" value="cup" 
+        onclick="document.getElementById('toppings').style.display= 'block';"> Cup
+    </label>
+
+       
+    <div id="toppings" style="display:none;">
+      <h2>Toppings</h2>
+      <label>
+        <input type="checkbox" id="hotFudge"/>
+        Hot Fudge ($1.25)
+      </label>
+      <label>
+        <input type="checkbox" id="cherry" />
+        Cherry ($0.25)
+      </label>
+      <label>
+        <input type="checkbox" id="whippedCream" />
+        whippedCream ($0.25)
+      </label>
+      <label>
+        <input type="checkbox" id="sprinkles" />
+        sprinkles ($0.50)
+      </label>
+    </div>
+
+<button type="button" id="estimateButton">Submit Order</button>
+<table class="totals">
+  <tbody>
+    <tr>
+      <td>Base Price:</td>
+      <td id="basePriceTD">xxx.xx</td>
+    </tr>
+    <tr>
+      <td>Tax:</td>
+      <td id="tax">xx.xx</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total due:</td>
+      <td id="totalTD">xxx.xx</td>
+    </tr>
+  </tfoot>
+</table>
+</body>
+</html>
